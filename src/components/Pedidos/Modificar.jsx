@@ -19,14 +19,18 @@ export default function PedidoModificar({ pedido, repartidores, pizzas }) {
 
             <p>Pizzas:</p>
 
-            {pizzas.map((pizza) => {
-                let checked = pizza.pedidos.some(pedido => pedido.id === pedido.id);
-                return(
+            {pizzas.map((pizza) => (
                 <div key={pizza.id}>
-                    <input type="checkbox" checked={checked} name="pizzas" value={pizza.id} id={`pizza-${pizza.id}`} />
+                    <input 
+                        type="checkbox" 
+                        defaultChecked={pizza.pedidos?.some(p => p.id === pedido.id) || false} 
+                        name="pizzas" 
+                        value={pizza.id} 
+                        id={`pizza-${pizza.id}`} 
+                    />
                     <label htmlFor={`pizza-${pizza.id}`}>{pizza.nombre}</label>
                 </div>
-            )})}
+            ))}
 
             <button className="border-2 border-black">Modificar</button>
         </form>

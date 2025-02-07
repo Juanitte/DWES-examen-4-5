@@ -14,7 +14,11 @@ export async function obtenerRepartidor(id) {
 // ------------------------ PEDIDOS ------------------------ \\
 
 export async function obtenerPedidos() {
-    return await prisma.pedido.findMany()
+    return await prisma.pedido.findMany(
+        {include: {repartidor: true,
+        pizzas: true
+        }}
+    )
 }
 
 export async function obtenerPedido(id) {
@@ -28,14 +32,11 @@ export async function obtenerPedido(id) {
 // ------------------------ PIZZAS ------------------------ \\
 
 export async function obtenerPizzas() {
-    return await prisma.pizza.findMany({
-        include: {pedidos: true}
-    })
+    return await prisma.pizza.findMany()
 }
 
 export async function obtenerPizza(id) {
     return await prisma.pizza.findUnique({
-        where: {id: +id},
-        include: {pedidos: true}
+        where: {id: +id}
     })
 }

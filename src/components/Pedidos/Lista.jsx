@@ -2,7 +2,7 @@ import { obtenerPedidos, obtenerPizzas, obtenerRepartidores } from "@/lib/data";
 import PedidoInsertar from "./Insertar";
 import PedidoModificar from "./Modificar";
 import PedidoEliminar from "./Eliminar";
-import Modal from "../modal";
+import Modal from "../Modal";
 
 
 export default async function Pedidos() {
@@ -24,6 +24,10 @@ export default async function Pedidos() {
                             <p>{pedido.nombre_cliente}</p>
                             <p>{pedido.direccion_cliente}</p>
                             <p>{repartidores.find(repartidor => repartidor.id === pedido.repartidor_id)?.nombre}</p>
+                            <p>Pizzas: </p>
+                            <ul>
+                                {pedido.pizzas.map(pizza => <li key={pizza.id}>{pizza.nombre}</li>)}
+                            </ul>
                         </div>
                         <Modal openElement={<p className="inline border-2 border-black">Modificar</p>}>
                             <PedidoModificar pedido={pedido} repartidores={repartidores} pizzas={pizzas} />

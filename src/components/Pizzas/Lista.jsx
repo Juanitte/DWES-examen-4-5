@@ -2,6 +2,7 @@ import { obtenerPizzas, obtenerPedidos } from "@/lib/data";
 import PizzaInsertar from "./Insertar";
 import PizzaModificar from "./Modificar";
 import PizzaEliminar from "./Eliminar";
+import Modal from "../Modal";
 
 export default async function Pizzas() {
     const pizzas = await obtenerPizzas();
@@ -17,21 +18,6 @@ export default async function Pizzas() {
                     <div>
                         <p className="text-lg font-bold">🍕 {pizza.nombre}</p>
                         <p className="text-sm">👨‍🏫 {pizza.precio}</p>
-                        
-                        <div className="mt-2">
-                            <p className="font-semibold">📚 Pedidos realizados:</p>
-                            {Array.isArray(pizza.pedidos) && pizza.pedidos.length > 0 ? (
-                                <ul className="list-disc list-inside">
-                                    {pizza.pedidos.map((pedido) => (
-                                        <li key={pedido.id} className="ml-4">
-                                            {pedido.nombre}
-                                        </li>
-                                    ))}
-                                </ul>
-                            ) : (
-                                <p className="text-gray-400 italic">No hay pedidos realizados.</p>
-                            )}
-                        </div>
                     </div>
                     <Modal openElement={<p className="inline border-2 border-black">Modificar</p>}>
                         <PizzaModificar pizza={pizza} />

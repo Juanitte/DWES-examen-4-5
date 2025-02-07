@@ -148,7 +148,7 @@ export async function insertarPizza(formData) {
     await prisma.pizza.create({
         data: {
             nombre: nombre,
-            precio: precio
+            precio: +precio
         }
         
     })
@@ -171,7 +171,7 @@ export async function modificarPizza(formData) {
         },
         data: {
             nombre: nombre,
-            precio: precio,
+            precio: +precio,
         }
     })
 

@@ -39,7 +39,7 @@ model Pizza {
   id            Int    @id @default(autoincrement())
   nombre        String
   precio        Float
-  Pedidos       Pedido[]
+  pedidos       Pedido[]
 
   @@map("pizzas")
 }
