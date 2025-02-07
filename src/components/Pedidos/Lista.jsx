@@ -12,7 +12,7 @@ export default async function Pedidos() {
     return (
         <div>
             <Modal openElement={<p className="inline border-2 border-black">Insertar pedido</p>}>
-                <PedidoInsertar/> {/*repartidores={repartidores} pizzas={pizzas}*/}
+                <PedidoInsertar repartidores={repartidores}/> {/* pizzas={pizzas}*/}
             </Modal>
 
             {
@@ -26,7 +26,7 @@ export default async function Pedidos() {
                             <p>{repartidores.find(repartidor => repartidor.id === pedido.repartidor_id)?.nombre}</p>
                         </div>
                         <Modal openElement={<p className="inline border-2 border-black">Modificar</p>}>
-                            <PedidoModificar pedido={pedido} />{/*repartidores={repartidores} pizzas={pizzas}*/}
+                            <PedidoModificar pedido={pedido} repartidores={repartidores} />{/* pizzas={pizzas}*/}
                         </Modal>
                         <Modal openElement={<p className="inline border-2 border-black">Eliminar</p>}>
                             <PedidoEliminar pedido={pedido} />
