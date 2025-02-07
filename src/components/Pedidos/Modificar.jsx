@@ -16,7 +16,7 @@ export default function PedidoModificar({ pedido, repartidores, pizzas }) {
                     ))
                 }
             </select>
-{/*
+
             <p>Pizzas:</p>
 
             {pizzas.map((pizza) => {
@@ -27,7 +27,6 @@ export default function PedidoModificar({ pedido, repartidores, pizzas }) {
                     <label htmlFor={`pizza-${pizza.id}`}>{pizza.nombre}</label>
                 </div>
             )})}
-                */}
 
             <button className="border-2 border-black">Modificar</button>
         </form>

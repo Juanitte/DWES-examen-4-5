@@ -15,7 +15,7 @@ export default async function PedidoInsertar({ repartidores, pizzas }) {
                     ))
                 }
             </select>
-{/*
+
             <p>Pizzas:</p>
 
             {pizzas.map((pizza) => (
@@ -23,7 +23,7 @@ export default async function PedidoInsertar({ repartidores, pizzas }) {
                     <input type="checkbox" name="pizzas" value={pizza.id} id={`pizza-${pizza.id}`} />
                     <label htmlFor={`pizza-${pizza.id}`}>{pizza.nombre}</label>
                 </div>
-            ))}*/}
+            ))}
 
             <button className="border-2 border-black" >Insertar pedido</button>
         </form>
