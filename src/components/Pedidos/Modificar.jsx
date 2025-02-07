@@ -1,4 +1,4 @@
-/*import { modificarPedido } from "@/lib/actions";
+import { modificarPedido } from "@/lib/actions";
 
 export default function PedidoModificar({ pedido, repartidores, pizzas }) {
     return (
@@ -8,7 +8,7 @@ export default function PedidoModificar({ pedido, repartidores, pizzas }) {
             <input name='fecha_y_hora' type='date' defaultValue={pedido.fecha_y_hora.toISOString().split('T')[0]} />
             <input name='nombre_cliente' defaultValue={pedido.nombre_cliente} />
             <input name='direccion_cliente' defaultValue={pedido.direccion_cliente} />
-
+{/*
             <select key={pedido.repartidor_id} name="repartidor_id" defaultValue={pedido.repartidor_id}>
                 {
                     repartidores.map((repartidor) => (
@@ -27,8 +27,9 @@ export default function PedidoModificar({ pedido, repartidores, pizzas }) {
                     <label htmlFor={`pizza-${pizza.id}`}>{pizza.nombre}</label>
                 </div>
             )})}
+                */}
 
             <button className="border-2 border-black">Modificar</button>
         </form>
     );
-}*/
+}

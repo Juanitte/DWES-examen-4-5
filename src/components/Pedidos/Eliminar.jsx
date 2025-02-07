@@ -1,4 +1,4 @@
-/*import { eliminarPedido } from "@/lib/actions";
+import { eliminarPedido } from "@/lib/actions";
 
 export default function PedidoEliminar({ pedido }) {
     return (
@@ -14,4 +14,4 @@ export default function PedidoEliminar({ pedido }) {
             </form>
         </>
     );
-}*/
+}

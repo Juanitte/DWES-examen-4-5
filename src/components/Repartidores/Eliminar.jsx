@@ -1,4 +1,4 @@
-/*import { eliminarRepartidor } from "@/lib/actions";
+import { eliminarRepartidor } from "@/lib/actions";
 
 export default function RepartidorEliminar({ repartidor }) {
     return (
@@ -12,4 +12,4 @@ export default function RepartidorEliminar({ repartidor }) {
             </form>
         </>
     );
-}*/
+}
