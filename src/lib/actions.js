@@ -66,7 +66,7 @@ export async function insertarPedido(formData) {
     const fecha_y_hora = new Date(formData.get('fecha_y_hora'))
     const nombre_cliente = formData.get('nombre_cliente')
     const direccion_cliente = formData.get('direccion_cliente')
-    //const repartidor_id = Number(formData.get('repartidor_id'))
+    const repartidor_id = Number(formData.get('repartidor_id'))
     //const pizzaIds = formData.getAll("pizzas");
     await prisma.pedido.create({
         data: {
@@ -74,11 +74,11 @@ export async function insertarPedido(formData) {
             fecha_y_hora: fecha_y_hora,
             nombre_cliente: nombre_cliente,
             direccion_cliente: direccion_cliente,
-            /*repartidor: {
+            repartidor: {
                 connect: {
                     id: repartidor_id
                 }
-            },
+            },/*
             pizzas: {
                 connect: pizzaIds.map(id => ({ id: Number(id) }))
             },*/
@@ -97,7 +97,7 @@ export async function modificarPedido(formData) {
     const fecha_y_hora = new Date(formData.get('fecha_y_hora'))
     const nombre_cliente = formData.get('nombre_cliente')
     const direccion_cliente = formData.get('direccion_cliente')
-    //const repartidor_id = Number(formData.get('repartidor_id'))
+    const repartidor_id = Number(formData.get('repartidor_id'))
     //const pizzaIds = formData.getAll("pizzas");
 
     await prisma.pedido.update({
@@ -109,11 +109,11 @@ export async function modificarPedido(formData) {
             fecha_y_hora: fecha_y_hora,
             nombre_cliente: nombre_cliente,
             direccion_cliente: direccion_cliente,
-            /*repartidor: {
+            repartidor: {
                 connect: {
                     id: repartidor_id
                 }
-            },
+            },/*
             pizzas: {
                 connect: pizzaIds.map(id => ({ id: Number(id) }))
             },*/

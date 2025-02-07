@@ -8,14 +8,14 @@ export default async function PedidoInsertar({ repartidores, pizzas }) {
             <input name="fecha_y_hora" type='date' />
             <input name="nombre_cliente" placeholder="Nombre del cliente" />
             <input name="direccion_cliente" placeholder="Direccion del cliente" />
-            {/*<select name="repartidor_id">
+            <select name="repartidor_id">
                 {
                     repartidores.map((repartidor) => (
                         <option key={repartidor.id} value={repartidor.id}>{repartidor.nombre}</option>
                     ))
                 }
             </select>
-
+{/*
             <p>Pizzas:</p>
 
             {pizzas.map((pizza) => (

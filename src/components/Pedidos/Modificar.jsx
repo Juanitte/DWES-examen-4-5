@@ -8,7 +8,7 @@ export default function PedidoModificar({ pedido, repartidores, pizzas }) {
             <input name='fecha_y_hora' type='date' defaultValue={pedido.fecha_y_hora.toISOString().split('T')[0]} />
             <input name='nombre_cliente' defaultValue={pedido.nombre_cliente} />
             <input name='direccion_cliente' defaultValue={pedido.direccion_cliente} />
-{/*
+
             <select key={pedido.repartidor_id} name="repartidor_id" defaultValue={pedido.repartidor_id}>
                 {
                     repartidores.map((repartidor) => (
@@ -16,7 +16,7 @@ export default function PedidoModificar({ pedido, repartidores, pizzas }) {
                     ))
                 }
             </select>
-
+{/*
             <p>Pizzas:</p>
 
             {pizzas.map((pizza) => {
