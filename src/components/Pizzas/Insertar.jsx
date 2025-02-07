@@ -1,4 +1,4 @@
-import { insertarPizza } from "@/lib/actions";
+/*import { insertarPizza } from "@/lib/actions";
 
 export default function PizzaInsertar() {
     return (
@@ -9,4 +9,4 @@ export default function PizzaInsertar() {
             <button type="submit" className="border-2 border-black">Insertar pizza</button>
         </form>
     );
-}
+}*/

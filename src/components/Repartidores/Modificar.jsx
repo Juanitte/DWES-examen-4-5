@@ -1,4 +1,4 @@
-import { modificarRepartidor } from "@/lib/actions";
+/*import { modificarRepartidor } from "@/lib/actions";
 
 export default function RepartidorModificar({ repartidor }) {
     return (
@@ -10,4 +10,4 @@ export default function RepartidorModificar({ repartidor }) {
             <button className="border-2 border-black">Modificar</button>
         </form>
     );
-}
+}*/

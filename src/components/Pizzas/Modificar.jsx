@@ -1,4 +1,4 @@
-import { modificarPizza } from "@/lib/actions";
+/*import { modificarPizza } from "@/lib/actions";
 
 export default function PizzaModificar({ pizza }) {
     return (
@@ -10,4 +10,4 @@ export default function PizzaModificar({ pizza }) {
             <button className="border-2 border-black">Modificar</button>
         </form>
     );
-}
+}*/

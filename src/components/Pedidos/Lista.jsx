@@ -1,12 +1,17 @@
-import { obtenerPedidos, obtenerRepartidores } from "@/lib/data";
+import { obtenerPedidos, obtenerPizzas, obtenerRepartidores } from "@/lib/data";
+import PedidoInsertar from "./Insertar";
+import PedidoModificar from "./Modificar";
+import PedidoEliminar from "./Eliminar";
 
 
 export default async function Pedidos() {
     const pedidos = await obtenerPedidos();
     const repartidores = await obtenerRepartidores();
+    const pizzas = await obtenerPizzas();
     return (
         <div>
 
+            {/*<PedidoInsertar repartidores={repartidores} pizzas={pizzas} />*/}
 
             {
                 pedidos.map(pedido =>
@@ -18,6 +23,10 @@ export default async function Pedidos() {
                             <p>{pedido.direccion_cliente}</p>
                             <p>{repartidores.find(repartidor => repartidor.id === pedido.repartidor_id).nombre}</p>
                         </div>
+
+                        {/*<PedidoModificar pedido={pedido} repartidores={repartidores} pizzas={pizzas} />*/}
+
+                        {/*<PedidoEliminar pedido={pedido} />*/}
 
                         <hr />
                     </div>

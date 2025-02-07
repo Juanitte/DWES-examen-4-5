@@ -1,4 +1,4 @@
-import { insertarPedido } from "@/lib/actions";
+/*import { insertarPedido } from "@/lib/actions";
 
 export default async function PedidoInsertar({ repartidores, pizzas }) {
 
@@ -28,4 +28,4 @@ export default async function PedidoInsertar({ repartidores, pizzas }) {
             <button className="border-2 border-black" >Insertar pedido</button>
         </form>
     );
-}
+}*/

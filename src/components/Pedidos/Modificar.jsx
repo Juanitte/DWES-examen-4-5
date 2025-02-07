@@ -1,4 +1,4 @@
-import { modificarPedido } from "@/lib/actions";
+/*import { modificarPedido } from "@/lib/actions";
 
 export default function PedidoModificar({ pedido, repartidores, pizzas }) {
     return (
@@ -31,4 +31,4 @@ export default function PedidoModificar({ pedido, repartidores, pizzas }) {
             <button className="border-2 border-black">Modificar</button>
         </form>
     );
-}
+}*/

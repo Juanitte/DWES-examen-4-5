@@ -1,4 +1,4 @@
-import { insertarRepartidor } from "@/lib/actions";
+/*import { insertarRepartidor } from "@/lib/actions";
 
 export default function RepartidorInsertar() {
     return (
@@ -8,4 +8,4 @@ export default function RepartidorInsertar() {
             <button className="border-2 border-black">Insertar repartidor</button>
         </form>
     );
-}
+}*/

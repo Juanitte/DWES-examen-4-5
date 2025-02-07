@@ -1,4 +1,7 @@
 import { obtenerPizzas, obtenerPedidos } from "@/lib/data";
+import PizzaInsertar from "./Insertar";
+import PizzaModificar from "./Modificar";
+import PizzaEliminar from "./Eliminar";
 
 export default async function Pizzas() {
     const pizzas = await obtenerPizzas();
@@ -6,6 +9,8 @@ export default async function Pizzas() {
 
     return (
         <div>
+
+            {/*<PizzaInsertar />*/}
 
             {pizzas.map((pizza) => (
                 <div key={pizza.id} className="p-4 mb-4 bg-slate-800 rounded-lg">
@@ -28,6 +33,10 @@ export default async function Pizzas() {
                             )}
                         </div>
                     </div>
+
+                    {/*<PizzaModificar pizza={pizza} />*/}
+
+                    {/*<PizzaEliminar pizza={pizza} />*/}
 
                     <hr />
                 </div>

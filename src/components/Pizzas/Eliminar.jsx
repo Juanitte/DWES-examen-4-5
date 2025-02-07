@@ -1,4 +1,4 @@
-import { eliminarPizza } from "@/lib/actions";
+/*import { eliminarPizza } from "@/lib/actions";
 
 export default function PizzaEliminar({ pizza }) {
     return (
@@ -12,4 +12,4 @@ export default function PizzaEliminar({ pizza }) {
             </form>
         </>
     );
-}
+}*/
