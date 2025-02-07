@@ -2,6 +2,7 @@ import { obtenerPedidos, obtenerPizzas, obtenerRepartidores } from "@/lib/data";
 import PedidoInsertar from "./Insertar";
 import PedidoModificar from "./Modificar";
 import PedidoEliminar from "./Eliminar";
+import Modal from "../modal";
 
 
 export default async function Pedidos() {
@@ -10,8 +11,9 @@ export default async function Pedidos() {
     const pizzas = await obtenerPizzas();
     return (
         <div>
-
-            {/*<PedidoInsertar repartidores={repartidores} pizzas={pizzas} />*/}
+            <Modal openElement={<p className="inline border-2 border-black">Insertar pedido</p>}>
+                <PedidoInsertar/> {/*repartidores={repartidores} pizzas={pizzas}*/}
+            </Modal>
 
             {
                 pedidos.map(pedido =>
@@ -21,13 +23,14 @@ export default async function Pedidos() {
                             <p>{pedido.fecha_y_hora.toLocaleDateString()}</p>
                             <p>{pedido.nombre_cliente}</p>
                             <p>{pedido.direccion_cliente}</p>
-                            <p>{repartidores.find(repartidor => repartidor.id === pedido.repartidor_id).nombre}</p>
+                            <p>{repartidores.find(repartidor => repartidor.id === pedido.repartidor_id)?.nombre}</p>
                         </div>
-
-                        {/*<PedidoModificar pedido={pedido} repartidores={repartidores} pizzas={pizzas} />*/}
-
-                        {/*<PedidoEliminar pedido={pedido} />*/}
-
+                        <Modal openElement={<p className="inline border-2 border-black">Modificar</p>}>
+                            <PedidoModificar pedido={pedido} />{/*repartidores={repartidores} pizzas={pizzas}*/}
+                        </Modal>
+                        <Modal openElement={<p className="inline border-2 border-black">Eliminar</p>}>
+                            <PedidoEliminar pedido={pedido} />
+                        </Modal>
                         <hr />
                     </div>
                 )

@@ -9,9 +9,9 @@ export default async function Pizzas() {
 
     return (
         <div>
-
-            {/*<PizzaInsertar />*/}
-
+            <Modal openElement={<p className="inline border-2 border-black">Insertar pizza</p>}>
+                <PizzaInsertar />
+            </Modal>
             {pizzas.map((pizza) => (
                 <div key={pizza.id} className="p-4 mb-4 bg-slate-800 rounded-lg">
                     <div>
@@ -33,11 +33,12 @@ export default async function Pizzas() {
                             )}
                         </div>
                     </div>
-
-                    {/*<PizzaModificar pizza={pizza} />*/}
-
-                    {/*<PizzaEliminar pizza={pizza} />*/}
-
+                    <Modal openElement={<p className="inline border-2 border-black">Modificar</p>}>
+                        <PizzaModificar pizza={pizza} />
+                    </Modal>
+                    <Modal openElement={<p className="inline border-2 border-black">Eliminar</p>}>
+                        <PizzaEliminar pizza={pizza} />
+                    </Modal>
                     <hr />
                 </div>
             ))}
